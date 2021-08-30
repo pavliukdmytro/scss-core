@@ -1,0 +1,55 @@
+//min-width: 0 px;
+@include media($col) {
+	@for $i from 1 through $column{
+		.col-#{$i}{
+			width: #{100 / $column * $i + '%'};
+		}
+	}
+}
+//min-width: 576 px;
+@include media($col-sm) {
+	@for $i from 1 through $column{
+		//сетка
+		.col-sm-#{$i}{
+			width: #{100 / $column * $i + '%'};
+		}
+		//отступи з права
+		.offset-sm-#{$i}{
+			margin-left: #{100 / $column * $i + '%'};
+		}
+	}
+}
+//min-width: 768px;
+@include media($col-md) {
+	@for $i from 1 through $column{
+		.col-md-#{$i}{
+			width: #{100 / $column * $i + '%'};
+		}
+		//отступи з права
+		.offset-md-#{$i}{
+			margin-left: #{100 / $column * $i + '%'};
+		}
+	}
+}
+//mi-width: 992px;
+@include media($col-lg) {
+	@for $i from 1 through $column{
+		.col-lg-#{$i}{
+			width: #{100 / $column * $i + '%'};
+		}
+		.offset-lg-#{$i}{
+			margin-left: #{100 / $column * $i + '%'};
+		}
+	}
+}
+//mi-width: 1200px;
+@include media($col-xl) {
+	@for $i from 1 through $column{
+		.col-xl-#{$i}{
+			width: #{100 / $column * $i + '%'};
+		}
+		.offset-xl-#{$i}{
+			margin-left: #{100 / $column * $i + '%'};
+		}
+	}
+}
