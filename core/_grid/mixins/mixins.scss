@@ -1,5 +1,0 @@
-@mixin media($brackpoint){
-	@media only screen and (min-width: $brackpoint){
-		@content;
-	}
-}
